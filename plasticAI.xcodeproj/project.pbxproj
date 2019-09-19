@@ -12,9 +12,13 @@
 		706F49AB233436A500EB990F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706F49A9233436A500EB990F /* Main.storyboard */; };
 		706F49AD233436A600EB990F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706F49AC233436A600EB990F /* Assets.xcassets */; };
 		706F49B0233436A600EB990F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706F49AE233436A600EB990F /* LaunchScreen.storyboard */; };
+		722CFFED0BA16F50C212D622 /* Pods_plasticAI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D24ADFB3289F9A69DECB519 /* Pods_plasticAI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		565483287EBBC1842FF9C819 /* Pods-plasticAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plasticAI.release.xcconfig"; path = "Target Support Files/Pods-plasticAI/Pods-plasticAI.release.xcconfig"; sourceTree = "<group>"; };
+		5D24ADFB3289F9A69DECB519 /* Pods_plasticAI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plasticAI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		603B00A953C1FCDEFCC5EE4C /* Pods-plasticAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plasticAI.debug.xcconfig"; path = "Target Support Files/Pods-plasticAI/Pods-plasticAI.debug.xcconfig"; sourceTree = "<group>"; };
 		706F49A2233436A500EB990F /* plasticAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plasticAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706F49A5233436A500EB990F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		706F49A7233436A500EB990F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				722CFFED0BA16F50C212D622 /* Pods_plasticAI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				706F49A4233436A500EB990F /* plasticAI */,
 				706F49A3233436A500EB990F /* Products */,
+				C2A9D8970CAC45F7401F12BA /* Pods */,
+				FC7933F34019138B5ACB92E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = plasticAI;
 			sourceTree = "<group>";
 		};
+		C2A9D8970CAC45F7401F12BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				603B00A953C1FCDEFCC5EE4C /* Pods-plasticAI.debug.xcconfig */,
+				565483287EBBC1842FF9C819 /* Pods-plasticAI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC7933F34019138B5ACB92E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D24ADFB3289F9A69DECB519 /* Pods_plasticAI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 706F49B4233436A600EB990F /* Build configuration list for PBXNativeTarget "plasticAI" */;
 			buildPhases = (
+				1B577EC492BC0E089A6C4F95 /* [CP] Check Pods Manifest.lock */,
 				706F499E233436A500EB990F /* Sources */,
 				706F499F233436A500EB990F /* Frameworks */,
 				706F49A0233436A500EB990F /* Resources */,
@@ -129,6 +155,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B577EC492BC0E089A6C4F95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-plasticAI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		706F499E233436A500EB990F /* Sources */ = {
@@ -280,6 +331,7 @@
 		};
 		706F49B5233436A600EB990F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 603B00A953C1FCDEFCC5EE4C /* Pods-plasticAI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +349,7 @@
 		};
 		706F49B6233436A600EB990F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 565483287EBBC1842FF9C819 /* Pods-plasticAI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
